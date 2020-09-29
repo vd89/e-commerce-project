@@ -1,11 +1,12 @@
 import React from 'react';
-import './App.css';
+import './App.scss';
+import HomePage from './component/HomePage';
 
 function App() {
   return (
-    <div className='App'>
-      <h1>Hell From Dax Code </h1>
-    </div>
+    <>
+      <HomePage />
+    </>
   );
 }
 
