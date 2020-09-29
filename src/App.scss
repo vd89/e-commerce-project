@@ -164,7 +164,12 @@ $main_color: black;
     }
   }
 }
-
+.signIn__singUp {
+  width: 850px;
+  display: flex;
+  justify-content: space-between;
+  margin: 20px auto;
+}
 .sign__in {
   width: 380px;
   display: flex;
@@ -178,6 +183,20 @@ $main_color: black;
     justify-content: space-between;
   }
 }
+.sign__up {
+  width: 380px;
+  display: flex;
+  flex-direction: column;
+
+  .sign__title {
+    margin: 10px 0;
+  }
+  .sign__button {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
 @mixin shrink_label {
   top: -14px;
   font-size: 12px;
