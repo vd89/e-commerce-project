@@ -15,7 +15,7 @@ export default class SignUp extends Component {
   }
   onChangeHandler = (e) => {
     const { name, value } = e.target;
-    this.setState({ [name]: value });
+    this.setCurrentUser({ [name]: value });
   };
   onSubmitHandler = async (e) => {
     e.preventDefault();
@@ -28,7 +28,7 @@ export default class SignUp extends Component {
     try {
       const { user } = await auth.createUserWithEmailAndPassword(email, password);
       await createUserProfileDocument(user, { displayName });
-      this.setState({
+      this.setCurrentUser({
         displayName: '',
         email: '',
         password: '',

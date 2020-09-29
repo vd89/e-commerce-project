@@ -17,7 +17,7 @@ export default class SignIn extends Component {
     const { email, password } = this.state;
     try {
       await auth.signInWithEmailAndPassword(email, password);
-      this.setState({ email: '', password: '' });
+      this.setCurrentUser({ email: '', password: '' });
     } catch (error) {
       console.error(error.message);
     }
@@ -25,7 +25,7 @@ export default class SignIn extends Component {
 
   onChangeHandler = (e) => {
     const { value, name } = e.target;
-    this.setState({ [name]: value });
+    this.setCurrentUser({ [name]: value });
   };
   render() {
     const { email, password } = this.state;
