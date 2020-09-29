@@ -166,9 +166,17 @@ $main_color: black;
 }
 
 .sign__in {
-  width: 30vw;
+  width: 380px;
   display: flex;
   flex-direction: column;
+
+  .sign__title {
+    margin: 10px 0;
+  }
+  .sign__button {
+    display: flex;
+    justify-content: space-between;
+  }
 }
 @mixin shrink_label {
   top: -14px;
@@ -242,5 +250,14 @@ $main_color: black;
     background-color: white;
     color: black;
     border: 1px solid black;
+  }
+  &.google__signIn {
+    background-color: #4285f4;
+    color: white;
+
+    &:hover {
+      background-color: #357ae8;
+      border: none;
+    }
   }
 }

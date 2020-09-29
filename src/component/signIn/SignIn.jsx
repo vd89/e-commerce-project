@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { signInWithGoogle } from '../../firebase/FirebaseUtils';
 import CustomButton from '../formInput/CustomButton';
 import FormInput from '../formInput/FormInput';
 
@@ -24,7 +25,7 @@ export default class SignIn extends Component {
     const { email, password } = this.state;
     return (
       <div className='sign__in'>
-        <h2>I already have a account</h2>
+        <h2 className='sign__title'>I already have a account</h2>
         <span>Sign In with your email and password</span>
         <form onSubmit={this.onSubmitHandler}>
           <FormInput
@@ -43,7 +44,12 @@ export default class SignIn extends Component {
             required
             onChangeHandler={this.onChangeHandler}
           />
-          <CustomButton type='submit'>Sign In</CustomButton>
+          <div className='sign__button'>
+            <CustomButton type='submit'>Sign In</CustomButton>{' '}
+            <CustomButton isGoogleSignIn onClick={signInWithGoogle}>
+              Sign In with Google
+            </CustomButton>
+          </div>
         </form>
       </div>
     );
