@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { Link, Redirect } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { ReactComponent as Logo } from '../../assets/crown.svg';
 import { auth } from '../../firebase/FirebaseUtils';
 
@@ -19,7 +19,6 @@ const Header = ({ currentUser }) => {
         </Link>
         {currentUser ? (
           <div className='link__option' onClick={() => auth.signOut()}>
-            <Redirect to='/' />
             SIGN OUT
           </div>
         ) : (
