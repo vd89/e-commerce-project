@@ -6,6 +6,8 @@ a {
   text-decoration: none;
   color: black;
 }
+$sub_color: grey;
+$main_color: black;
 
 .header {
   height: 70px;
@@ -160,5 +162,85 @@ a {
     .collection__footerPrice {
       width: 10%;
     }
+  }
+}
+
+.sign__in {
+  width: 30vw;
+  display: flex;
+  flex-direction: column;
+}
+@mixin shrink_label {
+  top: -14px;
+  font-size: 12px;
+  color: $main-color;
+}
+
+.form__group {
+  position: relative;
+  margin: 45px 0;
+
+  .form__input {
+    background: none;
+    background-color: white;
+    color: $sub-color;
+    font-size: 18px;
+    padding: 10px 10px 10px 5px;
+    display: block;
+    width: 100%;
+    border: none;
+    border-radius: 0;
+    border-bottom: 1px solid $sub-color;
+    margin: 25px 0;
+
+    &:focus {
+      outline: none;
+    }
+
+    &:focus ~ .form__inputLabel {
+      @include shrink_label();
+    }
+  }
+
+  input[type='password'] {
+    letter-spacing: 0.3em;
+  }
+
+  .form__inputLabel {
+    color: $sub-color;
+    font-size: 16px;
+    font-weight: normal;
+    position: absolute;
+    pointer-events: none;
+    left: 5px;
+    top: 10px;
+    transition: 300ms ease all;
+
+    &.shrink {
+      @include shrink_label();
+    }
+  }
+}
+
+.custom__button {
+  min-width: 165px;
+  width: auto;
+  height: 50px;
+  letter-spacing: 0.5px;
+  line-height: 50px;
+  padding: 0 35px 0 35px;
+  font-size: 15px;
+  background-color: black;
+  color: white;
+  text-transform: uppercase;
+  font-family: 'Open Sans Condensed';
+  font-weight: bolder;
+  border: none;
+  cursor: pointer;
+
+  &:hover {
+    background-color: white;
+    color: black;
+    border: 1px solid black;
   }
 }
