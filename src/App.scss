@@ -352,6 +352,11 @@ $main_color: black;
     display: flex;
     flex-direction: column;
     overflow: scroll;
+
+    .cart__emptyMessage {
+      font-size: 18px;
+      margin: 50px auth;
+    }
   }
 
   button {
