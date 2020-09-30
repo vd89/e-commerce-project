@@ -140,6 +140,7 @@ $main_color: black;
   flex-direction: column;
   height: 350px;
   align-items: center;
+  position: relative;
 
   .collection__image {
     width: 100%;
@@ -163,6 +164,22 @@ $main_color: black;
 
     .collection__footerPrice {
       width: 20%;
+    }
+  }
+  .custom__button {
+    width: 80%;
+    opacity: 0.7;
+    position: absolute;
+    top: 255px;
+    display: none;
+  }
+  &:hover {
+    .collection__image {
+      opacity: 0.8;
+    }
+    .custom__button {
+      opacity: 0.85;
+      display: flex;
     }
   }
 }
@@ -266,6 +283,8 @@ $main_color: black;
   font-weight: bolder;
   border: none;
   cursor: pointer;
+  display: flex;
+  justify-content: center;
 
   &:hover {
     background-color: white;
@@ -278,6 +297,17 @@ $main_color: black;
 
     &:hover {
       background-color: #357ae8;
+      border: none;
+    }
+  }
+  &.button__inverted {
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+
+    &:hover {
+      background-color: black;
+      color: white;
       border: none;
     }
   }
@@ -321,7 +351,7 @@ $main_color: black;
     height: 240px;
     display: flex;
     flex-direction: column;
-    overflow: scroll;
+    // overflow: scroll;
   }
 
   button {
