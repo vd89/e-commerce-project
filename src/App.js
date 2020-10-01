@@ -25,7 +25,6 @@ class App extends Component {
             id: snapShot.id,
             ...snapShot.data(),
           });
-          console.log(this.state);
         });
       } else {
         setCurrentUser(userAuth);
@@ -43,7 +42,7 @@ class App extends Component {
         <Header />
         <Switch>
           <Route exact path='/' component={HomePage} />
-          <Route exact path='/shop' component={Shop} />
+          <Route path='/shop' component={Shop} />
           <Route exact path='/signIn' render={() => (currentUser ? <Redirect to='/' /> : <SignInAndSignUp />)} />
           <Route exact path='/checkout' component={CheckOut} />
         </Switch>

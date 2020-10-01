@@ -135,7 +135,7 @@ $main_color: black;
   }
 }
 .collection__item {
-  width: 22%;
+  width: 22vw;
   display: flex;
   flex-direction: column;
   height: 350px;
@@ -457,5 +457,30 @@ $main_color: black;
   .remove__button {
     padding-left: 12px;
     cursor: pointer;
+  }
+}
+
+.collections__overview {
+  display: flex;
+  flex-direction: column;
+}
+
+.collection__page {
+  display: flex;
+  flex-direction: column;
+
+  .collection__title {
+    font-size: 38px;
+    margin: 0 auto 30px;
+  }
+
+  .collection__itemsPage {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 10px;
+
+    & .collection__item {
+      margin-bottom: 30px;
+    }
   }
 }
