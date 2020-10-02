@@ -6,7 +6,7 @@ import './App.scss';
 import Header from './component/header/Header';
 import { auth, createUserProfileDocument } from './firebase/FirebaseUtils';
 import CheckOut from './pages/CheckOut';
-import HomePage from './pages/HomePage';
+import HomePage from './pages/homePage/HomePage';
 import Shop from './pages/shop/Shop';
 import SignInAndSignUp from './pages/SignInAndSignUp';
 import { setCurrentUser } from './redux/user/userAction';
