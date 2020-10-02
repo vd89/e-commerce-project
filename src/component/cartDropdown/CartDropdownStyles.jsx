@@ -20,8 +20,10 @@ export const CartDropDownButton = styled(CustomButton)`
 `;
 
 export const EmptyMessageContainer = styled.span`
+  display: flex;
+  flex-direction: column;
   font-size: 18px;
-  margin: 50px auth;
+  margin: 50px auto;
 `;
 
 export const CartItemsContainer = styled.div`
