@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-import { auth, signInWithGoogle } from '../../firebase/FirebaseUtils';
-import CustomButton from '../formInput/CustomButton';
-import FormInput from '../formInput/FormInput';
+import { auth, signInWithGoogle } from '../../../firebase/FirebaseUtils';
+import CustomButton from '../../formInput/Button/CustomButton';
+import FormInput from '../../formInput/Form/FormInput';
+import { ButtonsBarContainer, SignInContainer, SignInTitle } from './SignInStyles';
 
 export default class SignIn extends Component {
   constructor() {
@@ -30,8 +31,8 @@ export default class SignIn extends Component {
   render() {
     const { email, password } = this.state;
     return (
-      <div className='sign__in'>
-        <h2 className='sign__title'>I already have a account</h2>
+      <SignInContainer>
+        <SignInTitle>I already have a account</SignInTitle>
         <span>Sign In with your email and password</span>
         <form onSubmit={this.onSubmitHandler}>
           <FormInput
@@ -50,14 +51,14 @@ export default class SignIn extends Component {
             required
             onChangeHandler={this.onChangeHandler}
           />
-          <div className='sign__button'>
+          <ButtonsBarContainer>
             <CustomButton type='submit'>Sign In</CustomButton>{' '}
             <CustomButton isGoogleSignIn onClick={signInWithGoogle}>
               Sign In with Google
             </CustomButton>
-          </div>
+          </ButtonsBarContainer>
         </form>
-      </div>
+      </SignInContainer>
     );
   }
 }

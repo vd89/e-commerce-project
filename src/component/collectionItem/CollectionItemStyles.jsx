@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import CustomButton from '../formInput/CustomButton';
+import CustomButton from '../formInput/Button/CustomButton';
 
 export const CollectionItemContainer = styled.div`
   width: 22vw;

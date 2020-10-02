@@ -17,7 +17,7 @@ const CollectionItem = ({ item, addItem }) => {
       <BackgroundImage className='collection__image' style={{ backgroundImage: `url(${imageUrl})` }} />
       <CollectionFooterContainer>
         <NameContainer>{name}</NameContainer>
-        <PriceContainer> ${price}</PriceContainer>
+        <PriceContainer> ${price.toFixed(2)}</PriceContainer>
       </CollectionFooterContainer>
       <AddButton onClick={() => addItem(item)} inverted>
         {' '}
